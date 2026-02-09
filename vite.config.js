@@ -10,22 +10,23 @@ export default defineConfig(({ mode }) => {
 
   return {
     build: {
-      sourcemap: false,
+      sourcemap: "hidden",
     },
     define: {
       'import.meta.env.VITE_SENTRY_RELEASE': JSON.stringify(release),
     },
     plugins: [
       vue(),
-      // sentryVitePlugin({
-      //   org: env.SENTRY_ORG,
-      //   project: env.SENTRY_PROJECT,
-      //   authToken: env.SENTRY_AUTH_TOKEN,
-      //   release: { name: release },
-      //   sourcemaps: {
-      //     assets: './dist/**',
-      //   },
-      // }),
+      sentryVitePlugin({
+        org: env.SENTRY_ORG,
+        project: env.SENTRY_PROJECT,
+        authToken: env.SENTRY_AUTH_TOKEN,
+        release: { name: release },
+        sourcemaps: {
+          assets: './dist/**',
+          filesToDeleteAfterUpload: ['./dist/**/*.map'],
+        },
+      }),
     ],
   }
 })
