@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@sentry/vue": "^8.34.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@sentry/cli": "^2.27.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "vite": "^5.1.6"
   }
