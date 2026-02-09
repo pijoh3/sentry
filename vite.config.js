@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     build: {
-      sourcemap: true,
+      sourcemap: false,
     },
     define: {
       'import.meta.env.VITE_SENTRY_RELEASE': JSON.stringify(release),
