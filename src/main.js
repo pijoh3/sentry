@@ -8,6 +8,7 @@ const app = createApp(App)
 Sentry.init({
   app, // Vue 앱 인스턴스 (에러 바운딩용)
   dsn: import.meta.env.VITE_SENTRY_DSN, // Sentry 프로젝트 전송 URL
+  release: import.meta.env.VITE_SENTRY_RELEASE, // 소스맵 매칭용 (빌드 시 주입)
   environment: import.meta.env.MODE, // development / production 등
   integrations: [
     Sentry.browserTracingIntegration(), // 페이지 로드·네비게이션 성능 트레이싱

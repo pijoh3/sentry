@@ -13,7 +13,7 @@
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@sentry/cli": "^2.27.0",
+    "@sentry/vite-plugin": "^4.9.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "vite": "^5.1.6"
   }
